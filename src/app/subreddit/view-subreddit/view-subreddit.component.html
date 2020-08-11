@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <hr />
+    <div class="col-md-9">
+      <div class="row post">
+        <div class="col-md-11">
+          <span>
+            <span class="subreddit-text "><a class="post-url" href="">{{subreddit.name}}</a></span>
+            <span> . Posted
+              <span> {{subreddit.createdDate}} </span>
+              by
+              <a *ngIf="subreddit.user === null" class="username" href="">Anonymous</a>
+              <a *ngIf="subreddit.user != null" class="username" href="">{{subreddit.user}}</a>
+            </span>
+          </span>
+          <hr />
+          <div>
+            <p class="post-text" [innerHtml]="subreddit.description"></p>
+          </div>
+          <app-post-tile [posts]="posts"></app-post-tile> 
+
+        </div>
+    
+        
+        
+    
+      </div>
+    </div>
+
+    
+    <div class="col-md-3">
+      <app-side-bar></app-side-bar>
+      <app-subreddit-side-bar></app-subreddit-side-bar>
+    </div>
+
+  </div>
+</div>

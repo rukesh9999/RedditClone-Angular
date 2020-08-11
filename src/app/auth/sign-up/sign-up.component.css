@@ -1,0 +1,8 @@
+.register-section{
+    margin: 100px;
+}
+
+
+  input.ng-invalid.ng-touched{
+    border: 1px solid red;    
+  }
